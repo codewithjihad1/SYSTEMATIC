@@ -398,6 +398,7 @@ Work section css start
 }
 .work-inner{
   padding: 50px 0;
+  overflow: hidden;
 }
 .work-title{
   margin-bottom: 40px;
