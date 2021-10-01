@@ -4,19 +4,10 @@ $( document ).ready(function() {
   $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
-    nav:true,
+    nav:false,
     autoplay:true,
     items:1,
-    responsive : {
-      0 :{
-        nav:false,
-        dots:false,
-      },
-      1000 :{
-        nav:true,
-        dots:true,
-      }
-    }
+    dots:false,
   });
 
   // Meanmenu Activate
