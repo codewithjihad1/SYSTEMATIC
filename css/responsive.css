@@ -1,0 +1,137 @@
+/* =============================
+Tablet Layout Design
+============================== */
+@media only screen and (max-width: 991px){
+  .main-menu-inner ul li {
+    padding: 0;
+  }
+  .main-menu-inner ul li:hover ul {
+    display: block;
+  }
+  .main-header-inner {
+    padding: 3%;
+  }
+  .top-header-inner {
+    padding: 3%;
+  }
+  .slider-inner {
+    padding: 2% 0;
+  }
+  .slider_item {
+    height: 100vh;
+  }
+  .main-menu-inner ul ul{
+    position: unset;
+  }
+  .main-menu-inner ul ul ul{
+    position: unset;
+  }
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-img {
+    max-width: 80%;
+    margin: 0 2%;
+  }
+  .hero-img img{
+    object-fit: cover;
+  }
+  .hero-txt {
+    margin: 2%;
+  }
+  .hero-txt h2{
+    margin: 2%;
+  }
+  .about-area {
+    width: 50%;
+    margin: 2% 0;
+    padding-right: 30px;
+  }
+  .service-area {
+    width: 50%;
+    margin: 2% 0;
+  }
+  .testimonial-area {
+    width: 50%;
+    clear: both;
+  }
+  .child-footer {
+    width: calc(100%/2 - 40px);
+    margin: 2%;
+  }
+  .work-inner {
+    padding: 2%;
+  }
+  .hero-inner {
+    padding: 2%;
+  }
+  
+}
+
+
+/* ===========================
+Small tablet Layout
+=========================== */
+@media only screen and (max-width: 768px){
+  .hero-txt h2 {
+    font-size: 50px;
+  }
+  .hero-img {
+    height: auto;
+  }
+  .mini-menu {
+    margin: 0 0 2%;
+  }
+  .top-header-inner{
+    flex-direction: column;
+  }
+  .main-header-inner{
+    flex-direction: column;
+  }
+  .social-link ul li:first-child{
+    margin-left: -10px;
+  }
+  .logo{
+    margin: 0 0 2%;
+  }
+}
+
+
+/* ===========================
+Mobile Layout
+=========================== */
+@media only screen and (max-width: 425px){
+  .hero-txt h2 {
+    font-size: 30px;
+  }
+  .about-area {
+    width: 100%;
+    padding: 2%;
+  }
+  .service-area {
+    width: 100%;
+    padding: 2%;
+  }
+  .testimonial-area {
+    width: 100%;
+    padding: 2%;
+  }
+  .child-footer {
+    width: 100%;
+    padding: 2%;
+    margin: 0;
+  }
+  .developer-text {
+    float: none;
+    text-align: center;
+  }
+  .copyRight-txt {
+    float: none;
+    text-align: center;
+    margin: 0 0 2%;
+  }
+  .mini-menu ul{
+    text-align: center;
+  }
+}

@@ -1,0 +1,664 @@
+/* ====================================
+Import Google Font
+==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* ====================================
+All content difine
+==================================== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kaisei Tokumin', serif;
+}
+.common-wrap{
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+}
+.main-wrap{
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+html, body{
+  color: #666666;
+  font-size: 10px;
+}
+
+
+/* ====================================
+Header section css star
+==================================== */
+.header-wrap{
+  float: left;
+  width: 100%;
+}
+
+
+/* ======================
+Header top css
+======================= */
+.top-header-wrap{
+  width: 100%;
+  background: #BA2E1F;  
+}
+.top-header-inner{
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.mini-menu{
+
+}
+.mini-menu ul{
+  list-style: none;
+  text-align: left; 
+}
+.mini-menu ul li{
+  display: inline-block;
+  position: relative; 
+}
+.mini-menu ul li:first-child a{
+  padding: 0 10px 0 0;
+}
+.mini-menu ul li a{
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 0 10px;
+}
+.mini-menu ul li::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+.mini-menu ul li:last-child:after{
+  width: 0;
+}
+.search-area{
+  max-width: 210px;
+  width: 100%;
+  height: 25px;
+  background: #fff;
+  border-radius: 25px;
+}
+.search-area input{
+  width: 85%;
+  height: 25px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #000;
+  float: left;
+}
+.search-area input[type="submit"]{
+  width: 15%;
+  background: url(../img/search-icon.png) no-repeat center center;
+  cursor: pointer;
+}
+.search-area input[type="text"]{
+  padding: 0 10px;
+  caret-color: #BA2E1F;
+}
+
+/* =======================
+Main Header css start
+======================= */
+.main-header{
+  width: 100%;
+  clear: both;
+}
+.main-header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+.logo{
+  width: 240px;
+}
+.social-link ul{
+  list-style: none;
+}
+.social-link ul li{
+  display: inline-block;
+  margin-left: 10px;
+}
+.social-link ul li a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+.social-link ul li a i{
+  width: 100%;
+  height: 100%;
+  line-height: 35px;
+  background: #333333;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 50%;
+  transition: .4s;
+}
+.social-link ul li a:hover i{
+  background: #BA2E1F;
+}
+.social-link ul li a:hover i.fa-linkedin-in{
+  background: #0077b5;
+}
+.social-link ul li a:hover i.fa-twitter{
+  background: #1DA1F2;
+}
+.social-link ul li a:hover i.fa-google{
+  background: #db4a39;
+}
+.social-link ul li a:hover i.fa-pinterest-p{
+  background: #E60023;
+}
+.social-link ul li a:hover i.fa-rss{
+  background: #ee802f;
+}
+
+
+/* ============================
+Navigation menu css start
+============================= */
+.main-menu{
+  width: 100%;
+  clear: both;
+  margin-bottom: 25px;
+}
+.main-menu-inner{
+  background: #333333;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+}
+.main-menu-inner::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: #2B2B2B;
+  z-index: -1;
+  border-radius: 5px;
+}
+.main-menu-inner ul{
+  list-style: none;
+  text-align: center;
+}
+.main-menu-inner ul li{
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  padding: 15px 0;
+}
+.main-menu-inner ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.main-menu-inner ul li:hover a{
+  color: #ba2e1f;
+}
+.main-menu-inner ul li:hover ul li a{
+  color: #fff;
+}
+
+
+/* ==========================
+Dropdown Menu Design
+=========================== */
+.main-menu-inner ul ul{
+  position: absolute;
+  left: -999px;
+  top: 50px;
+  background: #ba2e1f;
+  width: 200px;
+  opacity: 0;
+}
+.main-menu-inner ul ul li{
+  display: block;
+  margin: 0;
+  padding: 5px 0;
+}
+.main-menu-inner ul ul li:hover{
+  background: #333333;
+  color: #fff;
+}
+.main-menu-inner ul ul ul{ 
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  border-left: 1px solid #ddd;
+  opacity: 0;
+}
+.main-menu-inner ul li:hover ul{
+  left: 0;
+  opacity: 1;
+}
+.main-menu-inner ul li:hover ul ul{
+  left: -9999px;
+}
+.main-menu-inner ul ul li:hover ul{
+  left: 200px;
+  opacity: 1;
+}
+
+
+
+/* ==========================
+Slider section start
+=========================== */
+.slider-wrap{
+  float: left;
+  width: 100%;
+  position: relative;
+  z-index: -9999;
+}
+.slider-inner{
+  padding: 40px 0;
+}
+.slider_item{
+  width: 100%;
+  height: 500px;
+  position: relative;
+  border: 5px solid #999999;
+}
+.slider_item h2{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+}
+.slider_item1{
+  background: url(../img/1.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item2{
+  background: url(../img/2.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item3{
+  background: url(../img/3.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item4{
+  background: url(../img/4.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item5{
+  background: url(../img/5.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item6{
+  background: url(../img/6.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item7{
+  background: url(../img/7.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item8{
+  background: url(../img/8.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item9{
+  background: url(../img/9.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item10{
+  background: url(../img/10.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item11{
+  background: url(../img/11.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slider_item12{
+  background: url(../img/12.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+
+/* ==========================
+Hero section css start
+=========================== */
+.hero-wrap{
+  float: left;
+  width: 100%;
+}
+.hero-inner{
+  display: flex;
+  justify-content: space-between;
+}
+.hero-img{
+  max-width: 400px;
+  height: 440px;
+  overflow: hidden;
+  margin-right: 30px;
+}
+.hero-img img{
+  width: 100%;
+  height: 100%;
+}
+.hero-txt{
+  max-width: 515px;
+}
+.hero-txt h2{
+  color: #000;
+  font-size: 82px;
+  line-height: 1em;
+  font-weight: normal;
+  margin: 100px 0 20px;
+}
+.hero-txt p{
+  color: #666666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.hero_btn{
+  text-align: right;
+}
+.hero_btn a{
+  text-decoration: none;
+  font-size: 16px;
+  color: #ba2e1f;
+}
+
+
+/* ==========================
+Work section css start
+=========================== */
+.work-wrap{
+  float: left;
+  width: 100%;
+  background: #f2f2f2;
+}
+.work-inner{
+  padding: 50px 0;
+}
+.work-title{
+  margin-bottom: 40px;
+}
+.work-title h2{
+  font-size: 26px;
+  color: #333333;
+}
+
+/* =========About Area========= */
+.about-area{
+  width: 300px;
+  margin-right: 30px;
+  float: left;
+}
+.about-area img{
+  border: 1px solid #DFDFDF;
+  padding: 4px;
+}
+.about-area p{
+  margin: 20px 0 15px;
+  color: #878787;
+  font-size: 14px;
+}
+.work-btn{
+  text-align: right;
+}
+.work-btn a{
+  text-decoration: none;
+  font-size: 16px;
+  color: #b92d1f;
+  text-transform: uppercase;
+}
+
+/* ===========Service Area=========== */
+.service-area{
+  width: 300px;
+  float: left;
+  margin-right: 30px;
+}
+.child-service{
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.child-service .serv-img {
+  width: 64px;
+  height: 64px;
+  float: left;
+}
+.child-service .serv-txt {
+  width: calc(100% - 80px);
+  float: right;
+}
+.serv-txt h4{
+  color: #878787;
+  font-size: 1.6rem;
+}
+.serv-txt p{
+  color: #878787;
+  font-size: 1.4rem;
+}
+
+/* ========Testimonial aRea======== */
+.testimonial-area {
+  float: left;
+  width: 300px;
+}
+
+/* ========Testimonial======== */
+.child-testimonial{
+  margin-bottom: 15px;
+}
+.child-testimonial h3{
+  font-size: 16px;
+  color: #989898;
+  display: flex;
+  align-items: center;
+}
+.child-testimonial h3 strong{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url(../img/comment.png) no-repeat center center;
+  background-size: contain;
+  margin-right: 10px;
+}
+.child-testimonial h3 span{
+  font-weight: 400;
+}
+.child-testimonial p{
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #878787;
+}
+
+
+/* ==========================
+Footer section css start
+=========================== */
+.footer-wrap{
+  float: left;
+  width: 100%;
+}
+.footer-inner{
+  padding: 30px 0;
+}
+.child-footer{
+  float: left;
+  width: calc(100%/4 - 40px);
+  margin-right: 40px;
+  border-top: 1px solid #666666;
+  padding-top: 20px;
+}
+.child-footer:nth-child(4){
+  margin-right: 0;
+}
+.f_title{
+  margin-bottom: 30px;
+}
+.f_title h2{
+  font-size: 1.6rem;
+  color: #666666;
+}
+.tweets p{
+  margin-bottom: 2rem;
+  color: #666666;
+  font-size: 1.2rem;
+}
+.tweets p a{
+  color: #b82c1f;
+  text-decoration: none;
+}
+
+/* ==========Footer Links========= */
+.footer-links ul{
+  list-style: none;
+}
+.footer-links ul li{
+  padding: .7rem 0;
+  border-bottom: 1px solid #D4D4D4;
+}
+.footer-links ul li a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #666666;
+}
+.footer-links ul li a i{
+  margin-right: 5px;
+}
+
+/* ==========Footer blog post========= */
+.single_post{
+  margin-bottom: 20px;
+}
+.single_post .post_title{
+  margin-bottom: 1.5rem;
+}
+.single_post .post_title h3{
+  font-size: 1.4rem;
+  color: #666666;
+  font-weight: 600;
+}
+.single_post .post_title span{
+  font-size: 1.2rem;
+  display: block;
+  color: #666666;
+}
+.single_post .post_title span strong{
+  color: #b82c1f;
+}
+.single_post p{
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.readMore-btn{
+  text-align: right;
+}
+.readMore-btn a{
+  font-size: 1.4rem;
+  color: #b82c1f;
+  text-decoration: none;
+}
+.readMore-btn a i{
+  font-size: 1rem;
+}
+
+/* ==========Contact form========= */
+.ft_contact-form input{
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #F2F2F2;
+  color: #989898;
+  border-radius: 5px;
+  caret-color: #b82c1f;
+}
+.ft_contact-form textarea{
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+  height: 110px;
+  resize: none;
+  border: none;
+  outline: none;
+  background: #f2f2f2;
+  color: #989898;
+  border-radius: 5px;
+}
+.ft_contact-form button{
+  margin: 5px 0;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #b82c1f;
+  background: #f2f2f2;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+
+/* ==========================
+CopyRight section css start
+=========================== */
+.copyRight-wrap{
+  float: left;
+  width: 100%;
+  background: #f2f2f2;
+}
+.copyRight-inner{
+  padding: 25px 0;
+  overflow: hidden;
+}
+.copyRight-txt{
+  float: left;
+}
+.developer-text{
+  float: right;
+}
+.copyRight-inner span{
+  color: #919191;
+  font-size: 1.4rem;
+}
+.copyRight-inner a{
+  text-decoration: none;
+  color: #919191;
+  transition: .4s;
+}
+.copyRight-txt a:hover{
+  color: #b82c1f;
+}
+
+
+
+
+
+
+.mean-container .mean-nav ul li a.mean-expand {
+  height: auto;
+  border: 0!important;
+}
+
